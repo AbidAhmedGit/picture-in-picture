@@ -1,9 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@900&family=Cinzel&family=Rock+Salt&display=swap');
+
 html {
     box-sizing: border-box;
 }
 
 body{
     margin: 0;
+    /* vh: viewport height */
     min-height: 100vh;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(37, 37, 37)
+    /* background: linear-gradient(to top, #696969, #575757); */
+    /* background: linear-gradient(to top right, rgb(31, 30, 30), rgb(80, 80, 80) 50%, rgb(153, 152, 152) 75%, #333 75%); */
+
+
+
+}
+
+.button-container {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+}
+
+button {
+    /* cursor changes to hand when hovering over the button */
+    cursor: pointer;
+    outline: none;
+    width: 120px;
+    height: 75px;
+    /* you can't use font-family on the body: button needs it to be explicitly here */
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    color:white;
+    text-shadow: 0 2px 5px black;
+    background: linear-gradient(to top, #696969, #575757);
+    border:2px solid black;
+    border-radius: 7px;
+    box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.4) 0 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(to bottom, #696969, #575757);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.3);
 }
